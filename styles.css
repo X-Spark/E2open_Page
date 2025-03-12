@@ -16,7 +16,7 @@ body {
     align-items: center;
     position: sticky;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
-    top: 50px;
+    top: 0;
     z-index: 99;
     border: none;
 }
