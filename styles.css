@@ -1,0 +1,389 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* container start */
+.container1 {
+    margin: 0%;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 15px 20px;
+    background-color: rgb(30, 91, 103);
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+    top: 0;
+    z-index: 99;
+    border: none;
+}
+
+.container1 p {
+    color: #fff;
+    margin: 0;
+}
+
+/* banner start */
+.banner {
+    margin-top: 0%;
+    padding-top: 0%;
+    max-width: 100%;
+}
+
+.banner img {
+    margin-top: 0;
+    padding-top: 0;
+    width: 100%;
+    height: 400px;
+    display: block;
+}
+
+/* nav bar start */
+.navbar {
+    background-color: rgb(30, 91, 103);
+    color: #ecf0f1;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+    position: sticky;
+    top: 55px; /* Adjust this value based on the height of the container */
+    z-index: 100;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 10px;
+    padding: 10px 10px;
+}
+
+.nav-links a {
+    color: #ecf0f1;
+    background-color: #517222;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 5px;
+    padding: 10px 10px;
+    display: block;
+    max-width: none;
+}
+
+.nav-links a:hover {
+    background-color: #4d3075;
+    color: #ecf0f1;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links a.active {
+    background-color: #4d3075;
+    border-radius: 5px;
+}
+
+/* nav bar end */
+
+.content {
+    padding: 20px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    background-color: #ecf0f1;
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Learning Course Card Styles */
+.course-card {
+    margin-top: 20px;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 -4px 8px rgba(0, 0, 0, 0.2), 4px 0 8px rgba(0, 0, 0, 0.2), -4px 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.course-card img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 400px;
+}
+
+.course-card .text-overlay {
+    position: absolute;
+    top: 48%;
+    left: 5%;
+    right: 50%;
+    transform: translateY(-50%);
+    padding: 20px 40px;
+    background-color: #cccccc; /* Semi-transparent background */
+    border-radius: 10px;
+    text-align: left; /* Left align text */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.course-card .text-overlay h2 {
+    margin: 0 0 10px 0;
+    font-size: 2em;
+}
+
+.course-card .text-overlay p {
+    color: #282828;
+    max-width: 100%;
+    margin: 0 0 10px 0;
+    font-size: 1em;
+}
+
+.course-card .text-overlay .btn {
+    background-color: #517222;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.course-card .text-overlay .btn:hover {
+    background-color: #4d3075;
+    transform: scale(1.1);
+}
+
+/* Footer Styling */
+footer {
+    background-color: #282828; /* Dark background */
+    margin-top: 20px; /* Margin at the top */
+    width: auto; /* Take full width */
+    color: white; /* Text color */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end; /* Horizontally align items to the right */
+    align-items: center; /* Vertically align items */
+}
+
+/* Text Styling */
+footer p {
+    margin: 0;
+    font-size: 1em;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+
+    /* Make the navbar sticky at the top */
+    .navbar {
+        position: sticky;
+        height: 40px;
+        top: 0; 
+        z-index: 1000;
+        background-color: rgb(30, 91, 103);
+        padding: 10px 20px;
+    }
+
+    /* Hide the default nav links */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Start off-screen */
+        height: 120vh; /* Make it full height */
+        width: 300px; /* Width of the side nav */
+        background-color: rgb(30, 91, 103);
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 60px; /* Space for the hamburger */
+        transition: right 0.3s ease-in-out;
+        box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Show the nav links when active */
+    .nav-links.active {
+        top: -120px;
+        right: 0; /* Bring it into view */
+    }
+
+    /* Style for nav links */
+    .nav-links li {
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links a {
+        margin: 5px;
+        background-color: transparent;
+        color: #ecf0f1;
+        padding: 10px 08px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .nav-links a:hover {
+        margin: 5px;
+        background-color: #34495e;
+        transform: none;
+    }
+
+    .nav-links a.active {
+        margin: 5px;
+        background-color: #34495e;
+    }
+
+    /* Hamburger icon styles */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        cursor: pointer;
+        position: sticky; /* Initially sticky within the navbar */
+        top: 20px; /* Adjust top position as needed */
+        right: 20px; /* Adjust right position as needed */
+        z-index: 1001; /* Ensure it's above the side nav */
+        margin-left: auto; /* Push it to the right within the navbar */
+    }
+
+    /* When the side nav is active, make the hamburger fixed */
+    .hamburger.active {
+        position: fixed;
+        top: 20px; /* Adjust top position as needed */
+        right: 20px; /* Adjust right position as needed */
+    }
+
+    /* Transform hamburger into "X" when active */
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    /*course card*/
+    .course-card .text-overlay .btn {
+        background-color: #517222;
+        color: #fff;
+        padding: 8px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 0.8em;
+        text-overflow: hidden;
+        transition: background-color 0.3s ease;
+        float: left; /* Keep at left */
+    }
+
+    .course-card .text-overlay {
+        width: auto;
+        height: auto;
+        padding: 10px;
+    }
+
+    .course-card .text-overlay p{
+        margin: 0;
+        padding: 05px;
+        font-size: 0.9em;
+        max-width: 100%;
+    }
+
+    .course-card .text-overlay h2 {
+        font-size: 1.5em;
+    }
+
+    .container1 {
+        position: relative;
+    }
+}
+
+@media (max-width: 520px) {
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden; /* Prevent horizontal scrollbar */
+    }
+
+    .navbar {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 1001;
+        box-sizing: border-box;
+    }
+
+    .hamburger {
+        margin: 0;
+        padding: 0;
+        width: 90%;
+    }
+
+    /* When the side nav is active, make the hamburger fixed */
+    .hamburger.active {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .container1 {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+   
+    .banner {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .banner img {
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+    }
+
+    footer {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+}
