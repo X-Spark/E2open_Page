@@ -283,6 +283,10 @@ body.nav-active {
         float: left; /* Keep at left */
     }
 
+    fas fa-external-link-alt {
+        margin-left: 5px;
+    }
+    
     .course-card .text-overlay {
         width: auto;
         height: auto;
@@ -303,4 +307,13 @@ body.nav-active {
 .container1 {
     position: relative;
 }
+}
+
+@media (max-width: 520px) {
+
+    .course-card .text-overlay {
+        width: 200px;
+        height: auto;
+        padding: 10px;
+    }
 }
